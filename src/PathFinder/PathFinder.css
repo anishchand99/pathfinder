@@ -1,0 +1,13 @@
+.grid {
+  display: flex;
+  flex-direction: start;
+  justify-content: center;
+  align-content: center;
+  margin-top: 50px;
+}
+button {
+  border-radius: 5px;
+  height: 40px;
+  width: 90px;
+  margin: 0 20px;
+}
