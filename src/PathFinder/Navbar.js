@@ -41,6 +41,11 @@ class Navbar extends Component {
           End Node
         </span>
         <span>
+          <div className="wall"></div>
+          Wall
+        </span>
+
+        <span>
           <div className="visitedNode"></div>
           Visited Nodes
         </span>

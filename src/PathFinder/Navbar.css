@@ -56,3 +56,11 @@
   border: 1px purple solid;
   background: white;
 }
+.wall {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border: 1px purple solid;
+  background: purple;
+}
+
