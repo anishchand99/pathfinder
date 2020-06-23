@@ -1,8 +1,11 @@
-import React, { Component } from "react";
-import Node from "./Node.js";
-import "./PathFinder.css";
-import Navbar from "./Navbar";
-import { dijkstra, getShortestPath } from "../algorithms/dijkstra";
+import React, { Component } from 'react';
+import Node from './Node.js';
+import './PathFinder.css';
+import Navbar from './Navbar';
+import { aStar } from '../algorithms/aStar';
+import { bfs } from '../algorithms/bfs';
+import { dfs } from '../algorithms/dfs';
+import { dijkstra, getShortestPath } from '../algorithms/dijkstra';
 import {
   START_NODE_COL,
   START_NODE_ROW,
@@ -10,7 +13,7 @@ import {
   END_NODE_ROW,
   GRID_COLS,
   GRID_ROWS,
-} from "../constants";
+} from '../constants';
 const createWallDictionary = () => {
   let wallDict = new Map();
   for (let i = 0; i < GRID_COLS; i++) {
@@ -27,7 +30,7 @@ const initialState = {
   startNodeRow: START_NODE_ROW,
   endNodeCol: END_NODE_COL,
   endNodeRow: END_NODE_ROW,
-  algo: "dijkstra",
+  algo: 'dijkstra',
   speed: 500,
   wallDict: wallDictionary,
 };
@@ -41,9 +44,9 @@ class PathFinder extends Component {
     this.setState({ grid: grid });
   }
   freezeButtons(bool) {
-    let startButton = document.getElementById("start");
+    let startButton = document.getElementById('start');
     startButton.disabled = bool;
-    let resetButton = document.getElementById("reset");
+    let resetButton = document.getElementById('reset');
     resetButton.disabled = bool;
   }
   selectAlgo = (algorithm) => {
@@ -65,10 +68,20 @@ class PathFinder extends Component {
     const startNode = grid[startNodeCol][startNodeRow];
     const endNode = grid[endNodeCol][endNodeRow];
     let visitedNodes = [];
-    if (algo === "dijkstra") {
+    let shortestPath;
+    if (algo === 'dijkstra') {
       visitedNodes = dijkstra(grid, startNode, endNode);
+      shortestPath = getShortestPath(startNode, endNode);
+    } else if (algo === 'breadthFirst') {
+      visitedNodes = bfs(grid, startNode, endNode);
+      shortestPath = getShortestPath(startNode, endNode);
+    } else if (algo === 'depthFirst') {
+      visitedNodes = dfs(grid, startNode, endNode);
+      shortestPath = visitedNodes;
+    } else {
+      visitedNodes = aStar(grid, startNode, endNode);
+      shortestPath = getShortestPath(startNode, endNode);
     }
-    const shortestPath = getShortestPath(startNode, endNode);
     this.removeCSS();
     this.animateAlgorithm(visitedNodes, startNode, endNode, shortestPath);
   }
@@ -80,15 +93,14 @@ class PathFinder extends Component {
       document.querySelector(`.node-Path`) != null
     ) {
       if (document.querySelector(`.node-Visited`) != null) {
-        document.querySelector(`.node-Visited`).className = "node";
+        document.querySelector(`.node-Visited`).className = 'node';
       }
       if (document.querySelector(`.node-Path`) != null) {
-        document.querySelector(`.node-Path`).className = "node";
+        document.querySelector(`.node-Path`).className = 'node';
       }
     }
   }
   animateAlgorithm(visitedNodes, startNode, endNode, shortestPath) {
-    console.log("animated   ", visitedNodes);
     const { speed } = this.state;
     for (let i = 0; i < visitedNodes.length; i++) {
       if (i === visitedNodes.length - 1) {
@@ -101,7 +113,7 @@ class PathFinder extends Component {
         const node = visitedNodes[i];
         if (node !== startNode && node !== endNode) {
           document.getElementById(`node-${node.column}-${node.row}`).className =
-            "node-Visited";
+            'node-Visited';
         }
       }, speed * i);
     }
@@ -111,7 +123,7 @@ class PathFinder extends Component {
       const node = shortestPath[i];
       if (node !== startNode && node !== endNode) {
         document.getElementById(`node-${node.column}-${node.row}`).className =
-          "node-Path";
+          'node-Path';
       }
     }
     this.freezeButtons(false);
@@ -181,31 +193,31 @@ class PathFinder extends Component {
       document.querySelector(`.nodewall`) != null
     ) {
       if (document.querySelector(`.node-Visited`) != null) {
-        document.querySelector(`.node-Visited`).className = "node";
+        document.querySelector(`.node-Visited`).className = 'node';
       }
       if (document.querySelector(`.node-Path`) != null) {
-        document.querySelector(`.node-Path`).className = "node";
+        document.querySelector(`.node-Path`).className = 'node';
       }
       if (document.querySelector(`.nodewall`) != null) {
-        document.querySelector(`.nodewall`).className = "node";
+        document.querySelector(`.nodewall`).className = 'node';
       }
     }
   }
   render() {
     const { grid } = this.state;
     return (
-      <div className="container">
+      <div className='container'>
         <Navbar
           selectAlgo={this.selectAlgo}
           selectSpeed={this.selectSpeed}
         ></Navbar>
-        <button id="start" onClick={() => this.visualizeAlgorithm()}>
+        <button id='start' onClick={() => this.visualizeAlgorithm()}>
           Visualize!
         </button>
-        <button id="reset" onClick={() => this.resetCSS()}>
+        <button id='reset' onClick={() => this.resetCSS()}>
           Reset!
         </button>
-        <div className="grid">
+        <div className='grid'>
           {grid.map((row, rowIndex) => {
             return (
               <div key={rowIndex}>

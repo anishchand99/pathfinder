@@ -9,5 +9,10 @@ button {
   border-radius: 5px;
   height: 40px;
   width: 90px;
-  margin: 0 20px;
+  margin: 5px 20px;
+}
+@media (max-width: 1200px) {
+  button {
+    font-size: 7px;
+  }
 }

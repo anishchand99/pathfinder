@@ -1,9 +1,9 @@
-export function bfs(grid, startNode, endNode) {
+export function dfs(grid, startNode, endNode) {
   const visitedNodes = [];
-  let queue = [startNode];
+  let stack = [startNode];
   let currentNode;
-  while (queue.length !== 0) {
-    currentNode = queue.shift();
+  while (stack.length !== 0) {
+    currentNode = stack.pop();
     if (currentNode.isWall) continue;
     if (!visitedNodes.includes(currentNode)) {
       visitedNodes.push(currentNode);
@@ -14,11 +14,11 @@ export function bfs(grid, startNode, endNode) {
       if (!visitedNodes.includes(node)) {
         node.previousNode = currentNode;
         if (!node.isWall) {
-          queue.push(node);
+          stack.push(node);
         }
       }
     }
-    if (queue.length === 0) {
+    if (stack.length === 0) {
       return visitedNodes;
     }
   }

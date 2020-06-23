@@ -1,12 +1,12 @@
 .node {
-  width: 25px;
-  height: 25px;
+  width: 1.5vw;
+  height: 3vh;
   margin: 0px auto;
   border: 1px solid purple;
 }
 .node-Visited {
-  width: 25px;
-  height: 25px;
+  width: 1.5vw;
+  height: 3vh;
   margin: 0px;
   border: 1px solid purple;
   animation-name: node-visit;
@@ -31,8 +31,8 @@
   }
 }
 .node-Path {
-  width: 25px;
-  height: 25px;
+  width: 1.5vw;
+  height: 3vh;
   margin: 0px;
   border: 1px solid purple;
   animation-name: shortest-path;
@@ -42,28 +42,28 @@
 }
 
 .nodestart {
-  width: 25px;
-  height: 25px;
+  width: 1.5vw;
+  height: 3vh;
   margin: 0px;
   border: 1px solid purple;
   background: green;
 }
 .nodestart:before {
-  content: "S";
+  content: 'S';
 }
 .nodefinish {
-  width: 25px;
-  height: 25px;
+  width: 1.5vw;
+  height: 3vh;
   margin: 0px;
   border: 1px solid purple;
   background: red;
 }
 .nodefinish:before {
-  content: "E";
+  content: 'E';
 }
 .nodewall {
-  width: 25px;
-  height: 25px;
+  width: 1.5vw;
+  height: 3vh;
   margin: 0px;
   border: 1px solid purple;
   background: purple;
