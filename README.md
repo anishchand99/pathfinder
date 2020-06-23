@@ -1,23 +1,17 @@
 Pathfinding Visualizer
-Welcome to Pathfinding Visualizer! I built this application because I was fascinated by pathfinding algorithms, and I wanted to visualize them in action. I hope that you enjoy playing around with this visualization tool just as much as I enjoyed building it. You can access it here (use Google Chrome!): https://clementmihailescu.github.io/Pathfinding-Visualizer/
 
-Meet the Algorithms
-This application supports the following algorithms:
+This project was built to implement different pathfinding algorithms and then use the CSS animations to visulaize them in action. The site can be accessed live at the link below: 
 
-Dijkstra's Algorithm (weighted): the father of pathfinding algorithms; guarantees the shortest path
+https://anishchand99.github.io/pathfinder/
 
-A Search* (weighted): arguably the best pathfinding algorithm; uses heuristics to guarantee the shortest path much faster than Dijkstra's Algorithm
+Brief Highlights of the project:
 
-Greedy Best-first Search (weighted): a faster, more heuristic-heavy version of A*; does not guarantee the shortest path
+The following algorithms are implemented: 
 
-Swarm Algorithm (weighted): a mixture of Dijkstra's Algorithm and A*; does not guarantee the shortest-path
+Dijkstra's Algorithm : The classic pathfinding algorithm that guarantees the shortest path
 
-Convergent Swarm Algorithm (weighted): the faster, more heuristic-heavy version of Swarm; does not guarantee the shortest path
+A Search*: An informed search algorithm that takes in a heuristic function's help to provide the shortest path much more efficiently than Dijkstra's.
 
-Bidirectional Swarm Algorithm (weighted): Swarm from both sides; does not guarantee the shortest path
+Breath-first Search: An algorithm that traveses the graph breadth wise (think wider), it guarantees shortest path.
 
-Breath-first Search (unweighted): a great algorithm; guarantees the shortest path
-
-Depth-first Search (unweighted): a very bad algorithm for pathfinding; does not guarantee the shortest path
-
-On top of the pathfinding algorithms listed above, I implemented a Recursive Division Maze Generation algorithm.
+Depth-first Search: An algorithm that traverses the graph depth wise (think deeper), it does not guarantee the shortest path.
