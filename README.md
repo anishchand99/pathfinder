@@ -24,5 +24,5 @@ This project was built to implement different pathfinding algorithms and then us
 
 <li>Depth-first Search: An algorithm that traverses the graph depth wise (think deeper), it does not guarantee the shortest path.</li>
 </ul>
-You can visit my website to see a project demo video under the projects section.
+You can visit my website to see a project demo video under the projects section (on desktop version).
 <i>https://anishchand.com/</i>
