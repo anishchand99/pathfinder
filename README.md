@@ -1,5 +1,6 @@
 <h1>Pathfinding Visualizer</h1>
 
+The project was bootstrapped by React. Download the project and hit npm install to install the dependencies. After installation, hit npm start to run the project on a web browser.
 
 This project was built to implement different pathfinding algorithms and then use the CSS animations to visulaize them in action. The site can be accessed live at the link below: 
 
@@ -9,16 +10,18 @@ This project was built to implement different pathfinding algorithms and then us
 <ul>
 <li>The speed of the algorithm can be adjusted for better visualization. </li>
 
-A click on the grid can add or remove walls to make the pathfinding more interesting.
+<li>A click on the grid can add or remove walls to make the pathfinding more interesting.</li>
 
-The start node and the end node can be dragged anywhere in the grid.
+<li>The start node and the end node can be dragged anywhere in the grid.</li>
 
-The following algorithms are implemented: 
+<li>The following algorithms are implemented: </li>
 
-Dijkstra's Algorithm : The classic pathfinding algorithm that guarantees the shortest path
+<li>Dijkstra's Algorithm : The classic pathfinding algorithm that guarantees the shortest path</li>
 
-A Search*: An informed search algorithm that takes in a heuristic function's help to provide the shortest path much more efficiently than Dijkstra's.
+<li>A Search*: An informed search algorithm that takes in a heuristic function's help to provide the shortest path much more efficiently than Dijkstra's.</li>
 
-Breath-first Search: An algorithm that traveses the graph breadth wise (think wider), it guarantees shortest path.
+<li>Breath-first Search: An algorithm that traveses the graph breadth wise (think wider), it guarantees shortest path.</li>
 
-Depth-first Search: An algorithm that traverses the graph depth wise (think deeper), it does not guarantee the shortest path.
+<li>Depth-first Search: An algorithm that traverses the graph depth wise (think deeper), it does not guarantee the shortest path.<li>
+
+You
