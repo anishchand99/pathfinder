@@ -23,5 +23,6 @@ This project was built to implement different pathfinding algorithms and then us
 <li>Breath-first Search: An algorithm that traveses the graph breadth wise (think wider), it guarantees shortest path.</li>
 
 <li>Depth-first Search: An algorithm that traverses the graph depth wise (think deeper), it does not guarantee the shortest path.<li>
-
-You
+</ul>
+You can visit my website to see a project demo video under the projects section.
+<i>https://anishchand.com/</i>
