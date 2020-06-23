@@ -1,13 +1,13 @@
-#Pathfinding Visualizer
+<h1>Pathfinding Visualizer</h1>
 
 
 This project was built to implement different pathfinding algorithms and then use the CSS animations to visulaize them in action. The site can be accessed live at the link below: 
 
-https://anishchand99.github.io/pathfinder/
+<i>https://anishchand99.github.io/pathfinder/</i>
 
 **Brief Highlights of the project:**
-
-The speed of the algorithm can be adjusted for better visualization. 
+<ul>
+<li>The speed of the algorithm can be adjusted for better visualization. </li>
 
 A click on the grid can add or remove walls to make the pathfinding more interesting.
 
