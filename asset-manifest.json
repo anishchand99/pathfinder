@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/pathfinder/static/css/main.0efa2a64.chunk.css",
+    "main.js": "/pathfinder/static/js/main.0c32946e.chunk.js",
+    "main.js.map": "/pathfinder/static/js/main.0c32946e.chunk.js.map",
+    "runtime-main.js": "/pathfinder/static/js/runtime-main.3981f986.js",
+    "runtime-main.js.map": "/pathfinder/static/js/runtime-main.3981f986.js.map",
+    "static/js/2.505f4758.chunk.js": "/pathfinder/static/js/2.505f4758.chunk.js",
+    "static/js/2.505f4758.chunk.js.map": "/pathfinder/static/js/2.505f4758.chunk.js.map",
+    "index.html": "/pathfinder/index.html",
+    "precache-manifest.d72888a962749d35660cea8596d6ff52.js": "/pathfinder/precache-manifest.d72888a962749d35660cea8596d6ff52.js",
+    "service-worker.js": "/pathfinder/service-worker.js",
+    "static/css/main.0efa2a64.chunk.css.map": "/pathfinder/static/css/main.0efa2a64.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3981f986.js",
+    "static/js/2.505f4758.chunk.js",
+    "static/css/main.0efa2a64.chunk.css",
+    "static/js/main.0c32946e.chunk.js"
+  ]
+}
